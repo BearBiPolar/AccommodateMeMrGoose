@@ -264,10 +264,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                             var list = "You Prefer: ";
                             var v1 = 0;
                             var rev = 0;
-                            var cmh = 0;
+                            var cmh = -1;
                             var mkv = 0;
                             var uwp = 0;
-                            var clv = 0;
+                            var clv = 1;
                             var facc = "Your Faculty is: ";
                             var fac = document.getElementById("faculty").value;
                             if(fac == "na")
@@ -526,7 +526,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 
                             myArray.sort(compareIndexFound);
-                            var firstChoice = myArray.pop().name;
+                            var first = myArray.pop()
+                            var firstChoice = first.name;
                             var firstString = "Mr. Goose suggests you to check out: " + firstChoice + "! ";
                             var resdes = "";
 
@@ -537,6 +538,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                                     break;
                                 case "REV":
                                     resdes = "Ron Eydt Village (REV) is a first-year exclusive residence, with plenty of social and academic programming to make your first year in residence a memorable one!";
+                                    break;
                                 case "CMH":
                                     resdes = "Claudette Millar Hall (CMH) is located in the heart of UW Place and offers single and semi-private double rooms, plenty of study space, and a variety of dining options.";
                                     break;
@@ -552,6 +554,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                                     break;
                                 default:
                                     resdes = "";
+                                    break;
 
 
                             }
@@ -561,7 +564,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
                             var print = "The Rankings in Order with Score --- ";
 
-                            myArray.push(v1array);
+                            myArray.push(first);
 
 
 
